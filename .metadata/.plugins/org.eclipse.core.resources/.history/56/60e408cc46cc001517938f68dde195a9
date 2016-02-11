@@ -11,15 +11,16 @@ Socket socket;
 	public void run() {
 		OutputStream aux;
 		try {
+			System.out.println("\n\t>>> Host conectado al servidor: "+ socket.getRemoteSocketAddress());
 			aux = this.socket.getOutputStream();
 			DataOutputStream flujo =new DataOutputStream(aux);
-			flujo.writeUTF("");
+	
 			for(;;){
 				Calendar calendario = Calendar.getInstance();
 				int hora =calendario.get(Calendar.HOUR_OF_DAY);
 				int minutos = calendario.get(Calendar.MINUTE);
 				int segundos = calendario.get(Calendar.SECOND);
-				flujo.writeUTF("\t" + hora + ":" + minutos + ":" + segundos);
+				flujo.writeUTF(hora + ":" + minutos + ":" + segundos);
 				Thread.sleep (1000); 
 			}
 		} catch (IOException e){

@@ -10,8 +10,7 @@ public class Servidor {
 			System.out.println("\n\t---------- SERVIDOR EN FUNCIONAMIENTO ---------- \n\n\t>>> IP Local: " + ipLocalHost + "\n\t>>> Escuchando el puerto: " + puerto);
 			while(true){
 				Socket socketCliente = socketServidor.accept();
-				System.out.print("\n\t>>> Nuevo cliente:\n\t\tIP: ");
-				System.out.println(socketCliente.getRemoteSocketAddress());
+				System.out.print("\n\t>>> Nuevo cliente:\n\tIP: ");
 				//System.out.println(socketCliente.getRemoteSocketAddress());
 
 				Runnable nuevoCliente = new HiloCliente(socketCliente); 

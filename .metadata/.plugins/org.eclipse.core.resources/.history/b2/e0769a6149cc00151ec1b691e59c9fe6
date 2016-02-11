@@ -7,7 +7,7 @@ public class Cliente {
 			Socket socketCliente = new Socket (dirIP, puerto);
 			InputStream aux = socketCliente.getInputStream();
 			DataInputStream flujo = new DataInputStream(aux);
-			System.out.println("\n\t>>> Host conectado al servidor: "+ socketCliente.getRemoteSocketAddress());
+			System.out.println("\n\t>>> :Host conectado al servidor: "+ socketCliente.getRemoteSocketAddress());
 			for(;;)System.out.println(flujo.readUTF());
 		} catch(Exception e) {
 			System.out.println(e.getMessage());

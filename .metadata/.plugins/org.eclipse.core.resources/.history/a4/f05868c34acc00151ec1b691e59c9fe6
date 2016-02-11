@@ -13,7 +13,7 @@ Socket socket;
 		try {
 			aux = this.socket.getOutputStream();
 			DataOutputStream flujo =new DataOutputStream(aux);
-			flujo.writeUTF("");
+			flujo.writeUTF("\n");
 			for(;;){
 				Calendar calendario = Calendar.getInstance();
 				int hora =calendario.get(Calendar.HOUR_OF_DAY);

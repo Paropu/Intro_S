@@ -11,8 +11,8 @@ public class Servidor {
 			while(true){
 				Socket socketCliente = socketServidor.accept();
 				System.out.print("\n\t>>> Nuevo cliente:\n\t\tIP: ");
-				System.out.println(socketCliente.getRemoteSocketAddress());
 				//System.out.println(socketCliente.getRemoteSocketAddress());
+				System.out.println(socketCliente.getRemoteSocketAddress());
 
 				Runnable nuevoCliente = new HiloCliente(socketCliente); 
 				Thread hilo = new Thread(nuevoCliente);
