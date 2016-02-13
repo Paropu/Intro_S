@@ -1,0 +1,24 @@
+import java.io.*;
+import java.net.*;
+
+public class Cliente {
+	public Cliente(InetAddress dirIP, Integer puerto){
+		try{
+			Socket socketCliente = new Socket (dirIP, puerto);
+			
+			
+			BufferedReader flujoEntrada = new BufferedReader (new InputStreamReader(socketCliente.getInputStream()));
+
+			
+			System.out.println("\n\t>>> Host conectado al servidor: "+ socketCliente.getRemoteSocketAddress());
+			for(;;)System.out.println(flujoEntrada.readLine());
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}
+
+/*
+	BufferedReader flujoEntrada = new BufferedReader (new InputStreamReader(socketCliente.getInputStream()));
+	System.out.println(flujoEntrada.readLine());
+ */
