@@ -1,0 +1,19 @@
+
+/* MARTIN PUGA EGEA & PABLO RODRIGUEZ PEREZ --- RO 1516/66 */
+
+
+La clase que contiene el método main es Intro_Sockets.java.
+
+
+Ejecución del programa:
+
+-Compilar el archivo Intro_Sockets.java
+
+-Para iniciar el servidor en un terminal: 
+	java Intro_Sockets s "Numero de puerto"
+
+-Para iniciar un cliente en un terminal:
+	java Intro_Sockets c "IP del Servidor" "Numero de puerto"
+
+-Cuando se desee cerrar un cliente, pulsar ^C
+ 
